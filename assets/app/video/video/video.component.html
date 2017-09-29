@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <app-video-input></app-video-input>
+    </div>
+</nav>
+<div class="row" style="padding-bottom: 70px;">
+    <div class="col-md-4">
+       <div class="table-responsive">
+        <table class="table" style="-webkit-overflow-scrolling: touch;">
+            <tbody>
+                <tr *ngFor="let video of videos">
+                    <button class="btn btn-danger" (click)="onRemoveClick(video)">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button> 
+                    <td (click)="onUrlClick(video.url)">{{ video.url}}</td> 
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <app-video-renderer></app-video-renderer>
+    </div>
+</div>
+
+

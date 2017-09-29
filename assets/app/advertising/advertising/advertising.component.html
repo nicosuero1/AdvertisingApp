@@ -1,0 +1,12 @@
+
+<app-advertise-input></app-advertise-input>
+
+<app-advertise [advertise]="adv" *ngFor="let adv of advertisings"></app-advertise>
+
+
+<div class="search-results"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="600"
+    (scrolled)="onScroll()">
+</div>

@@ -1,0 +1,15 @@
+<form class="navbar-form" role="search" (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div class="form-group">
+        <input 
+                    type="text" 
+                    id="url" 
+                    class="form-control"
+                    name = "url"
+                    ngModel
+                    required
+                    pattern="^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*"
+                    placeholder="video url...">
+        
+    </div>
+    <button type="submit" class="btn btn-default" [disabled]="!form.valid">Add</button>
+</form>
